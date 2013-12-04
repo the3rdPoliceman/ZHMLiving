@@ -53,45 +53,18 @@ module.exports = function(grunt) {
                     authKey: 'key1'
                 },
                 src: 'build',
-                dest: '/',
+                dest: '/www/zhm-living.ch/',
                 exclusions: ['build/**/.DS_Store', 'build/**/Thumbs.db', 'dist/tmp']
             }
         },
         copy: {
             main: {
-                files: [
-                    // includes files within path
-                    {
-                        expand: true,
-                        src: ['path/*'],
-                        dest: 'dest/',
-                        filter: 'isFile'
-                    },
-
-                    // includes files within path and its sub-directories
-                    {
-                        expand: true,
-                        src: ['path/**'],
-                        dest: 'dest/'
-                    },
-
-                    // makes all src relative to cwd
-                    {
-                        expand: true,
-                        cwd: 'path/',
-                        src: ['**'],
-                        dest: 'dest/'
-                    },
-
-                    // flattens results to a single level
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['path/**'],
-                        dest: 'dest/',
-                        filter: 'isFile'
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    cwd: 'contents/',
+                    src: ['**'],
+                    dest: 'build/'
+                }]
             }
         }
     });
@@ -101,4 +74,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+
+    grunt.registerTask('default', ['clean:build', 'copy:main:files']);
+    grunt.registerTask('deploy', ['clean:build', 'copy:main:files', 'ftp-deploy']);
 };
