@@ -61,9 +61,8 @@ a:hover {
     text-align: center;
     font-size: 16px !important;
     font-family:"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
-    width: 120px;
-    height: 25px;
     vertical-align: middle;
+    padding: 5px;
     border: none;
     white-space: nowrap;
 }
