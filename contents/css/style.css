@@ -1,26 +1,33 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
-
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=c916d31f-b55a-49d2-8865-90241b1383cd&fontids=694015,694027");
+ @font-face {
+    font-family:"HelveticaNeueW02-45Ligh";
+    src:url("../fonts/694015/88fcd49a-13c7-4d0c-86b1-ad1e258bd75d.eot?#iefix");
+    src:url("../fonts/694015/88fcd49a-13c7-4d0c-86b1-ad1e258bd75d.eot?#iefix") format("eot"), url("../fonts/694015/9a2e4855-380f-477f-950e-d98e8db54eac.woff") format("woff"), url("../fonts/694015/fa82d0ee-4fbd-4cc9-bf9f-226ad1fcbae2.ttf") format("truetype"), url("../fonts/694015/48d599a6-92b5-4d43-a4ac-8959f6971853.svg#48d599a6-92b5-4d43-a4ac-8959f6971853") format("svg");
+}
+@font-face {
+    font-family:"HelveticaNeueW02-65Medi";
+    src:url("../fonts/694027/55f60419-09c3-42bd-b81f-1983ff093852.eot?#iefix");
+    src:url("../fonts/694027/55f60419-09c3-42bd-b81f-1983ff093852.eot?#iefix") format("eot"), url("../fonts/694027/5b4a262e-3342-44e2-8ad7-719998a68134.woff") format("woff"), url("../fonts/694027/4a3ef5d8-cfd9-4b96-bd67-90215512f1e5.ttf") format("truetype"), url("../fonts/694027/58ab5075-53ea-46e6-9783-cbb335665f88.svg#58ab5075-53ea-46e6-9783-cbb335665f88") format("svg");
+}
 /* Define HTML5 elements as blocks in case they are not understood by the browser*/
  header, section, footer, aside, nav, article, figure {
     display: block;
 }
-html {
-    overflow-y: scroll;
-    height: 100%;
-}
 body, h1 {
+    color: #666666;
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW02-45Ligh", Arial, sans-serif;
     position: relative;
     margin: 0px 0px 0px 0px;
-    font-family:'Open Sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.2px;
-    line-height: 1.1em;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    word-spacing: 0.5px;
+    line-height: 1.2em;
     font-size: 16px;
-    color: #666666;
     height: 100%;
 }
-img {
-    vertical-align: bottom
+.paragraph-header {
+    font-family:"HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeueW02-65Medi", Arial, sans-serif;
+    color: #666666;
 }
 a:link, a:visited, a:active {
     color: #666666;
@@ -34,35 +41,8 @@ a:hover {
     color: #6b9c32;
     text-decoration: none;
 }
-#header-menu-spacer {
-    height: 66px;
-    width: 100%;
-}
-#map_canvas {
-    float: left;
-    margin-right: 30px;
-    width: 500px;
-    height: 400px;
-}
-/* Layout for footer to stick to the bottom of the page */
- .wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -30px;
-}
-.footer, .push {
-    height: 30px;
-    margin-top: 30px;
-    font-size: 10px;
-}
-.objekte-squeezed {
-    height :300px;
-    overflow: hidden;
-}
-.objekte-normal {
-}
 .more-button-panel {
+    background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     text-align: center;
     vertical-align: middle;
@@ -71,7 +51,6 @@ a:hover {
     line-height: 40px;
     top: 260px;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 .more-button-panel:hover {
     cursor: pointer;
@@ -104,14 +83,6 @@ a:hover {
     position:relative;
     display: block;
 }
-.logo {
-    width: 213px;
-    height: 46px;
-}
-.centered {
-    width: 920px;
-    margin: 0px auto 0px auto;
-}
 .horizontal-divider {
     width: 100%;
     border-width: 1px 0px 0px 0px;
@@ -119,38 +90,4 @@ a:hover {
     border-style: solid;
     margin-top: 2px;
     height: 9px;
-}
-.paragraph-header {
-    font-family:'Open Sans', sans-serif;
-    font-weight: 600;
-    color: #666666;
-}
-.paragraph-spacer {
-    clear : both;
-    height: 30px;
-}
-.column1 {
-    float : left;
-    width : 430px;
-    margin-right: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.column2 {
-    float : left;
-    width : 430px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.content-top-spacer {
-    clear : both;
-    height: 21px;
-}
-.team-image {
-    float: right;
-    width: 140px;
-    height: 180px;
-}
-.clearfix {
-    clear: both;
 }
