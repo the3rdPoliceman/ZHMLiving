@@ -7,7 +7,7 @@
     <!-- meta tags -->
     <meta name="description" content="Webseite von ZHM living AG. ZHM living ist die Totalunternehmung für gross- und kleinmassstäblichen Wohnungsbau">
     <meta name="keywords" content="ZHM,zhm,living,Living,AG,totalunternehmung,bau,wohnung,wohnungsbau" />
-    <meta name="robot" content="index,follow" />
+    <meta name="robot" content="noindex,nofollow" />
     <meta name="copyright" content="&copy; 2013" />
     <meta name="author" content="David Moore">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -26,9 +26,72 @@
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/src/markerwithlabel.js" type="text/javascript"></script>
 
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <style type='text/css'>
+    .myClose {
+        height: 30px;
+        width: 30px;
+        background: rgba(0, 0, 0, 0);
+        background-image: url("images/fancybox/icon_lightbox_close.png");
+    }
+    .myPrev {
+        height: 30px;
+        width: 30px;
+        left: -37px;
+        top:50%;
+        background: rgba(0, 0, 0, 0);
+        background-image: url("images/fancybox/icon_lightbox_back.png");
+    }
+    .myNext {
+        height: 30px;
+        width: 30px;
+        right: -37px;
+        top:50%;
+        background: rgba(0, 0, 0, 0);
+        background-image: url("images/fancybox/icon_lightbox_next.png");
+    }
+    .fancybox-skin {
+        position: relative;
+        background: #f9f9f9;
+        color: #444;
+        text-shadow: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+    }
+    </style>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("a[rel=visualisation-gallery]").fancybox({
+            preload: 5,
+            nextEffect: 'fade',
+            prevEffect: 'fade',
+            padding: 44,
+            openSpeed: 250,
+            prevSpeed: 500,
+            nextSpeed: 500,
+            nextClick: true,
+            loop: true,
+            tpl: {
+                closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
+                prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
+                next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
+            }
+        });
+    });
+    </script>
     <!-- Initialise accordian and map -->
     <script>
-    initAccordian();
+    initAccordianWithSqueezedPanel();
 
     var map;
 
@@ -99,11 +162,11 @@
         <div>
             <table class="header-table">
                 <tr>
-                    <td class="table-column-1"></td>
-                    <td class="table-column-2">
+                    <td class="header-column-1"></td>
+                    <td class="header-column-2">
                         <img class="logo" src="images/logo_zhm.gif" alt="Logo" title="Logo for ZHM living AG">
                     </td>
-                    <td class="table-column-3"></td>
+                    <td class="header-column-3"></td>
                 </tr>
             </table>
         </div>
@@ -126,7 +189,7 @@
                 </div>
             </div>
             <div class="clearfix"></div>
-            <!-- Commented out until development of objeckte content is complete, at which point the default visible section will be a squeeze portion of the Objekte part of the page
+            <!-- Commented out until development of objekte content is complete, at which point the default visible section will be a squeeze portion of the Objekte part of the page
 
             <div id="objekte-header" class="accordian-header centered">Objekte</div>
             <div class="horizontal-divider"></div>
@@ -137,13 +200,85 @@
             <div id="objekte-header" class="accordian-header centered">Objekte</div>
             <div class="horizontal-divider"></div>
             <div id="objekte-content" class="accordian-content centered">
-                <div class="content-top-spacer"></div>
-                Unser Internetauftritt ist in Bearbeitung
+                <div class="objekt-header">
+                    <span class="objekt-tab-header-selected" id="main">MFH Blümlisalp</span>
+                    <span class="objekt-tab-header" id="wohnungen">Wohnungen</span>
+                    <span class="objekt-tab-header" id="umgebung">Umgebung</span>
+                    <span class="objekt-tab-header" id="unterlagen">Unterlagen</span>
+                    <span class="objekt-tab-header" id="kontakt">Kontakt</span>
+                </div>
+                <div class="horizontal-divider"></div>
+                <div class="tab-content-holder">
+                    <div id="main-content" class="tab-content">
+                        <div class="vertical-spacer-20px"></div>
+                        <div class="column1">
+                            <p class="paragraph-with-space-below">
+                                <span class="paragraph-header">In der Gemeinde Heimberg entsteht ein modernes dreistöckiges Mehrfamilienhaus in grüner Umgebung.</span>
+                            </p>
+                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg">
+                                <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                            </a>
+                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
+                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg" class="hide"></a>
+                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
+                        </div>
+                        <div class="column2">
+                            <p>
+                                <span class="paragraph-header">Ländliches Wohnen in der Stadt Thun:&nbsp</span>Die Lage des Wohnhauses ist einzigartig - Sie erleben Wohnen mit Dorfcharakter und profitieren gleichzeitig von der Nähe zur Stadt Thun, die im Süden angrenzt. Die Liegenschaft mit drei 4.5-Zimmer-Wohnungen auf drei Stöcken und die Umgebung eignen sich hervorragend als Wohnort für Familien und Kindern.</p>
+                            <div class="paragraph-spacer"></div>
+                            <p>Bei der Entwicklung er Liegenschaft wird hoher Wert auf eine solide Bauweise und auf die Wahl der Materialien gelegt. Trotz der hohen Bauqualität überzeugen die drei Kaufobjekte durch einen äußerst attraktiven Preis.</p>
+                            <div class="paragraph-spacer"></div>
+                            <p>
+                                <span class="objekt-redirect" target="wohnungen">Zu den Wohnungen...</p>
+                        </div>
+                    </div>
+                    <div id="wohnungen-content" class="tab-content hide">
+                        <div class="vertical-spacer-20px"></div>
+                        <div class="column1">
+                            <p class="paragraph-with-space-below">
+                                <span class="paragraph-header">Placeholder Text</span>
+                            </p>
+                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                        </div>
+                        <div class="column2">
+                            <span class="paragraph-header">Wohnungen Content&nbsp</span>Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here.
+                        </div>
+                    </div>
+                    <div id="umgebung-content" class="tab-content hide">
+                        <div class="vertical-spacer-20px"></div>
+                        <div class="column1">
+                            <p class="paragraph-with-space-below">
+                                <span class="paragraph-header">Placeholder Text</span>
+                            </p>
+                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                        </div>
+                        <div class="column2">
+                            <span class="paragraph-header">Umgebung Content&nbsp</span>Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here.
+                        </div>
+                    </div>
+                    <div id="unterlagen-content" class="tab-content hide">
+                        <div class="vertical-spacer-20px"></div>
+                        <div class="column1">
+                            <p class="paragraph-with-space-below">
+                                <span class="paragraph-header">Placeholder Text</span>
+                            </p>
+                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                        </div>
+                        <div class="column2">
+                            <span class="paragraph-header">Unterlagen Content&nbsp</span>Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here.
+                        </div>
+                    </div>
+                    <div id="kontakt-content" class="tab-content hide">
+                        <div class="vertical-spacer-20px"></div>
+                        Do we need another kontakt tab?
+                    </div>
+                </div>
             </div>
             <div class="accordian-header centered">Referenzen</div>
             <div class="horizontal-divider"></div>
             <div class="accordian-content centered">
-                <div class="content-top-spacer"></div>Unser Internetauftritt ist in Bearbeitung
+                <div class="content-top-spacer"></div>
+                Unser Internetauftritt ist in Bearbeitung
             </div>
             <div class="accordian-header centered">Kontakt</div>
             <div class="horizontal-divider"></div>
@@ -171,6 +306,34 @@
             © ZHM living AG, 2013 • ALL RIGHTS RESERVED • KÖCHLISTRASSE 2, 8004 ZÜRICH, SCHWEIZ • <a href="mailto:info@zhm-living.ch">info@zhm-living.ch</a>
         </div>
     </div>
+
+
+    <!-- Setup the objekte content swapping behaviour -->
+    <script>
+    $('.objekt-header span').on("click", function(e) {
+
+        var $this = $(this);
+        triggerTabChange($this);
+    });
+
+    $('.objekt-redirect').on("click", function(e) {
+        var $target = $("#" + $(this).attr('target'));
+        triggerTabChange($target);
+    });
+
+    function triggerTabChange($this) {
+        var $id = $this.attr('id');
+        var $target = '#' + $id + '-content';
+
+        $this.siblings().addClass('objekt-tab-header');
+        $this.siblings().removeClass('objekt-tab-header-selected');
+        $this.removeClass('objekt-tab-header');
+        $this.addClass('objekt-tab-header-selected');
+
+        $('.tab-content').addClass('hide');
+        $($target).removeClass('hide');
+    }
+    </script>
 
     <!-- Google Analytics Tracking -->
     <script>

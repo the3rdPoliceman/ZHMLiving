@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                     authKey: 'key1'
                 },
                 src: 'build',
-                dest: '/www/zhm-living.ch/',
+                dest: '/www/test.zhm-living.ch/',
                 exclusions: ['build/**/.DS_Store', 'build/**/Thumbs.db', 'dist/tmp']
             }
         },

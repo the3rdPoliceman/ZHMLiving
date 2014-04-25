@@ -1,0 +1,34 @@
+div #mymap {
+    border: medium none;
+    height: 272px;
+    position: absolute;
+    width: 400px;
+    z-index: 30;
+}
+ul li {
+    display: none;
+    position: absolute;
+    text-indent: -9999px;
+    z-index: 20;
+}
+#apartment1 {
+    background: url("images/apartment1.png") no-repeat scroll 0 0 transparent;
+    height: 72px;
+    left: 0;
+    top: 0;
+    width: 400px;
+}
+#apartment2 {
+    background: url("images/apartment2.png") no-repeat scroll 0 0 transparent;
+    height: 100px;
+    left: 0;
+    top: 0;
+    width: 400px;
+}
+#apartment3 {
+    background: url("images/apartment3.png") no-repeat scroll 0 0 transparent;
+    height: 100px;
+    left: 0;
+    top: 0;
+    width: 400px;
+}

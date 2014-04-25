@@ -1,0 +1,31 @@
+div.world_map_container #transparent_map {
+   border: medium none;
+  height: 140px;
+ position: absolute;
+ width: 270px;
+ z-index: 30;
+}
+
+ ul li {
+   display: none;
+   position: absolute;
+   text-indent: -9999px;
+   z-index: 20;
+ }
+
+
+ #northamerica {
+   background: url("/RegionsImages/map/north_america.png") no-repeat scroll 0 0      transparent;
+   height: 140px;
+   right: 0;
+   top: 0;
+   width: 270px;
+ }
+
+  #southamerica {
+  background: url("/RegionsImages/map/south_america.png") no-repeat scroll 0 0 transparent;
+   height: 140px;
+   right: 0;
+   top: 0;
+   width: 270px;
+ }

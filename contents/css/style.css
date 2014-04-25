@@ -83,6 +83,29 @@ a:hover {
     position:relative;
     display: block;
 }
+.objekt-tab-header {
+    color: #707070;
+    padding-right: 30px;
+}
+.objekt-tab-header:hover {
+    cursor: pointer;
+    color: #707070;
+    padding-right: 30px;
+}
+.objekt-tab-header-selected {
+    color: #6b9c32;
+    padding-right: 30px;
+}
+.objekt-redirect {
+    color: #707070;
+}
+.objekt-redirect:hover {
+    cursor: pointer;
+    color: #6b9c32;
+}
+.hide {
+    display: none;
+}
 .horizontal-divider {
     width: 100%;
     border-width: 1px 0px 0px 0px;
