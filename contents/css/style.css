@@ -25,9 +25,14 @@ body, h1 {
     font-size: 16px;
     height: 100%;
 }
-.paragraph-header {
-    font-family:"HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeueW02-65Medi", Arial, sans-serif;
-    color: #666666;
+ul {
+    margin: 0px 0px 0px 16px;
+    padding-left: 0;
+    list-style-position: outside;
+    list-style-type: ;
+}
+ul li{
+
 }
 a:link, a:visited, a:active {
     color: #666666;
@@ -40,6 +45,10 @@ a:link, a:visited, a:active {
 a:hover {
     color: #6b9c32;
     text-decoration: none;
+}
+.paragraph-header {
+    font-family:"HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeueW02-65Medi", Arial, sans-serif;
+    color: #666666;
 }
 .more-button-panel {
     background-color: rgba(255, 255, 255, 0.8);
@@ -106,6 +115,10 @@ a:hover {
 .hide {
     display: none;
 }
+.attribution {
+    margin : 0px;
+    font-size:10px;
+}
 .horizontal-divider {
     width: 100%;
     border-width: 1px 0px 0px 0px;
@@ -113,4 +126,9 @@ a:hover {
     border-style: solid;
     margin-top: 2px;
     height: 9px;
+}
+.myClose {
+    height: 50px;
+    width: 50px;
+    background: #ff0000;
 }

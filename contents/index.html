@@ -71,8 +71,41 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-        $("a[rel=visualisation-gallery]").fancybox({
+        $("a[rel=visualisation-gallery-1]").fancybox({
             preload: 5,
+            nextEffect: 'fade',
+            prevEffect: 'fade',
+            padding: 44,
+            openSpeed: 250,
+            prevSpeed: 500,
+            nextSpeed: 500,
+            nextClick: true,
+            loop: true,
+            tpl: {
+                closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
+                prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
+                next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
+            }
+        });
+
+        $("a[rel=visualisation-gallery-2]").fancybox({
+            preload: 5,
+            nextEffect: 'fade',
+            prevEffect: 'fade',
+            padding: 44,
+            openSpeed: 250,
+            prevSpeed: 500,
+            nextSpeed: 500,
+            nextClick: true,
+            loop: true,
+            tpl: {
+                closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
+                prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
+                next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
+            }
+        });
+
+        $("a[rel=groundplan-slide]").fancybox({
             nextEffect: 'fade',
             prevEffect: 'fade',
             padding: 44,
@@ -205,7 +238,6 @@
                     <span class="objekt-tab-header" id="wohnungen">Wohnungen</span>
                     <span class="objekt-tab-header" id="umgebung">Umgebung</span>
                     <span class="objekt-tab-header" id="unterlagen">Unterlagen</span>
-                    <span class="objekt-tab-header" id="kontakt">Kontakt</span>
                 </div>
                 <div class="horizontal-divider"></div>
                 <div class="tab-content-holder">
@@ -215,16 +247,17 @@
                             <p class="paragraph-with-space-below">
                                 <span class="paragraph-header">In der Gemeinde Heimberg entsteht ein modernes dreistöckiges Mehrfamilienhaus in grüner Umgebung.</span>
                             </p>
-                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg">
+                            <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg">
                                 <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
                             </a>
-                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
-                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg" class="hide"></a>
-                            <a rel="visualisation-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
+                            <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
+                            <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg" class="hide"></a>
+                            <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
                         </div>
                         <div class="column2">
                             <p>
-                                <span class="paragraph-header">Ländliches Wohnen in der Stadt Thun:&nbsp</span>Die Lage des Wohnhauses ist einzigartig - Sie erleben Wohnen mit Dorfcharakter und profitieren gleichzeitig von der Nähe zur Stadt Thun, die im Süden angrenzt. Die Liegenschaft mit drei 4.5-Zimmer-Wohnungen auf drei Stöcken und die Umgebung eignen sich hervorragend als Wohnort für Familien und Kindern.</p>
+                                <span class="paragraph-header">Ländliches Wohnen in der Stadt Thun:&nbsp</span>Die Lage des Wohnhauses ist einzigartig - Sie erleben Wohnen mit Dorfcharakter und profitieren gleichzeitig von der Nähe zur Stadt Thun, die im Süden angrenzt. Die Liegenschaft mit drei 4.5-Zimmer-Wohnungen auf drei Stöcken und die Umgebung eignen sich hervorragend als Wohnort für Familien und Kindern.
+                            </p>
                             <div class="paragraph-spacer"></div>
                             <p>Bei der Entwicklung er Liegenschaft wird hoher Wert auf eine solide Bauweise und auf die Wahl der Materialien gelegt. Trotz der hohen Bauqualität überzeugen die drei Kaufobjekte durch einen äußerst attraktiven Preis.</p>
                             <div class="paragraph-spacer"></div>
@@ -235,42 +268,108 @@
                     <div id="wohnungen-content" class="tab-content hide">
                         <div class="vertical-spacer-20px"></div>
                         <div class="column1">
-                            <p class="paragraph-with-space-below">
-                                <span class="paragraph-header">Placeholder Text</span>
-                            </p>
-                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                            <span class="paragraph-header">Erwerben Sie Stockwerkeigentum im Mehrfamilienhaus Blümlisalp und ziehen Sie schon bald in Ihr neues Zuhause in Heimberg.</span>
+                            <br>Drei Wohnungen befinden sich im Mehrfamilienhaus Blüemlisalp. Es wird grossen Wert auf die Wahl hochwertiger Materialien und eine solide Bauweise gelegt. Kundenwünsche bezüglich des Ausbaus werden gerne berücksichtigt.
+
+                            <div class="vertical-spacer-30px"></div>
                         </div>
                         <div class="column2">
-                            <span class="paragraph-header">Wohnungen Content&nbsp</span>Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here.
+                            <span class="paragraph-header">Wohnung und Ausbaustandard:</span>
+                            <br>Die Eigentumswohnungen zeichnen sich durch grosse Wohn- und Essräume mit offener Küche aus. Der Korridor ist grosszügig angelegt, sodass genügend Platz für die Garderobe vorhanden ist.
+                            <br>Ausserdem gibt es zu jeder Wohnung ein Kellerabteil im Untergeschoss und eine Terrasse (im Erdgeschoss) bzw. ein Balkon (im 1. und 2. Obergeschoss).
+                            <div class="vertical-spacer-30px"></div>
+                        </div>
+                            <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg">
+                                <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen-Layout-890.jpg">
+                            </a>
+                            <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
+                            <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg" class="hide">
+                            <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
+
+                        <div class="vertical-spacer-30px"></div>
+                        <div class="column1">
+                            <a rel="groundplan-slide" href="images/visualisations/heimberg-mfh-bluemlisalp-GR.gif">
+                                <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-GR_kl.gif">
+                            </a>
+                        </div>
+                        <div class="column2">
+                            <p>Jede Wohnung verfügt über einen grosszügigen Wohn- und Essraum mit einer offenen Küche und total 113 m² Wohnfläche. Die Grundrisspläne der drei Kaufobjekte sind identisch. Bei den Wohnungen im ersten und zweiten Obergeschoss ist ein Balkon anstatt der Terrasse in gleicher Grösse vorhanden.
+                            </p>
+                            <div class="paragraph-spacer"></div>
+                            <p>Der Wohnung vorgelagert, gleich beim Wohnungseingang im Treppenhaus, ist jeweils ein Reduit bzw. Wäscheraum. In jeder Wohnung befindet sich ein Bad mit WC und ein zusätzliches Gäste-WC. Alle Wohnungen verfügen über einen modernen Ausbaustandard.
+                            </p>
+                            <div class="paragraph-spacer"></div>
+                            <p>
+                                <span class="objekt-redirect" target="umgebung">Zur Umgebung...</span>
+                            </p>
                         </div>
                     </div>
                     <div id="umgebung-content" class="tab-content hide">
                         <div class="vertical-spacer-20px"></div>
                         <div class="column1">
-                            <p class="paragraph-with-space-below">
-                                <span class="paragraph-header">Placeholder Text</span>
-                            </p>
-                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                            <span class="paragraph-header">Wohnen in der Gemeinde Heimberg – ländlich und stadtnah</span>
+                            <br>Erwerben Sie Stockwerkeigentum im Mehrfamilienhaus Blümlisalp und ziehen Sie schon bald in Ihr neues Zuhause in Heimberg. Die ländliche Gemeinde liegt im Berner Oberland und zählt 6500 Einwohner. Die Ortschaft an der Aare zeichnet sich vor allem durch ihre einzigartige Lage aus: Im Grünen gelegen und doch nahe der angrenzenden Stadt Thun.
+                            <div class="vertical-spacer-30px"></div>
                         </div>
                         <div class="column2">
-                            <span class="paragraph-header">Umgebung Content&nbsp</span>Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here.
+                            Heimberg verfügt über eine attraktive Infrastruktur mit eigenem Hallenbad und mehreren Einkaufs- und Sportzentren und ist optimal an den privaten und öffentlichen Verkehr angeschlossen. Ausserdem profitiert man von zahlreichen Naherholungsgebieten und der prächtigen Sicht auf die Voralpen in Richtung Süd-Osten. Eine Besonderheit ist auch das lebendige Dorf- und Vereinsleben. Zudem befinden sich in Heimberg mehrere Schulen und Kindergärten.
+                            <div class="vertical-spacer-30px"></div>
+                        </div>
+                        <div>
+                            <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-Umgebung-Heimberg-890.jpg">
+                        </div>
+                        <div class="attribution">Bild oben: Mit freundlicher Genehmigung von Berner Oberland Tourismus</div>
+                        <div class="vertical-spacer-20px"></div>
+                        <div class="column1">
+                            <span class="paragraph-header">Wohnen an der Blümlisalpstrasse</span>
+                            <div class="vertical-spacer-30px"></div>
+                            Ihr neues Zuhause (1) ist perfekt gelegen: Zu Fuss gelangen Sie in wenigen Minuten zu einem Denner-Lebensmittelladen (2) und zur Bahnhaltestelle Lädeli (3) sowie zum Einkaufszentrum Heimberg Shopping (4-7).
+                            <br>Dort finden Sie neben einem Coop-Supermarkt (4) auch ein Wohncenter (5) sowie Restaurants, eine Bank (6) und weitere Geschäfte (7).
+                            <div class="vertical-spacer-30px"></div>
+                            Im Umkreis von einem Kilometer erreichen Sie ausserdem die Gemeindeverwaltung und das Sportzentrum Heimberg.
+                            <div class="paragraph-spacer"></div>
+                            <p>
+                                <span class="objekt-redirect" target="unterlagen">Zu den Unterlagen...</span>
+                            </p>
+                        </div>
+                        <div class="column2">
+                            <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-Umgebung-Haus.gif">
                         </div>
                     </div>
                     <div id="unterlagen-content" class="tab-content hide">
                         <div class="vertical-spacer-20px"></div>
-                        <div class="column1">
-                            <p class="paragraph-with-space-below">
-                                <span class="paragraph-header">Placeholder Text</span>
+                        <div>
+                            <p class="column1">
+                                    <span class="paragraph-header">Werden Sie Stockwerkeigentümer im Mehrfamilienhaus Blümlisalp</span>
                             </p>
-                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen_kl.jpg">
+                        </div>
+                        <div class="paragraph-spacer"></div>
+                        <div class="column1">
+                            <img src="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen-abend_kl.jpg">
                         </div>
                         <div class="column2">
-                            <span class="paragraph-header">Unterlagen Content&nbsp</span>Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here. Need some content here.
+                            Mehrfamilienhaus Blümlisalp – Ihr neues Zuhause
+                            <br>Blümlisalpstrasse 33
+                            <br>3627 Heimberg
+                            <div class="paragraph-spacer"></div>
+                            <ul>
+                                <li>Drei 4.5-Zimmer-Wohnungen</li>
+                                <li>Drei Stockwerke</li>
+                                <li>113 m² Wohnfläche je Wohnung</li>
+                                <li>Jede Wohnung mit Balkon und Kellerabteil im Untergeschoss</li>
+                                <li>Moderner Ausbaustandard</li>
+                                <li>Kinderspielplatz vor dem Haus</li>
+                                <li>Einkaufszentrum vier Gehminuten entfernt</li>
+                            </ul>
+                            <div class="paragraph-spacer"></div>
+                            Für weitere Unterlagen sowie Kaufpreise der drei Wohnungen und der Aussenparkplätze füllen Sie das untenstehende Formular aus.
                         </div>
-                    </div>
-                    <div id="kontakt-content" class="tab-content hide">
-                        <div class="vertical-spacer-20px"></div>
-                        Do we need another kontakt tab?
+                        <div class="paragraph-spacer"></div>
+                        <div class="column1">
+                        <p>Wir freuen uns auf Ihre Kontaktaufnahme.</p>
+                        <div class="paragraph-spacer"></div>
+                        <p class="paragraph-header">Ihr ZHM-living-Team</p>
+                        </div>
                     </div>
                 </div>
             </div>
