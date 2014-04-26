@@ -27,8 +27,7 @@ body, h1 {
 }
 ul {
     margin: 0px 0px 0px 16px;
-    padding-left: 0;
-    list-style-position: outside;
+    padding-left: list-style-position: outside;
     list-style-type:;
 }
 ul li {
@@ -70,7 +69,7 @@ a:hover {
 }
 .accordian-header:hover {
     cursor: pointer;
-    color: #707070;
+    color: #909090;
 }
 .accordian-header:active {
     color: #6b9c32;
@@ -92,12 +91,12 @@ a:hover {
     display: block;
 }
 .objekt-tab-header {
-    color: #707070;
+    color: #404040;
     padding-right: 30px;
 }
 .objekt-tab-header:hover {
     cursor: pointer;
-    color: #707070;
+    color: #909090;
     padding-right: 30px;
 }
 .objekt-tab-header-selected {
@@ -105,11 +104,11 @@ a:hover {
     padding-right: 30px;
 }
 .objekt-redirect {
-    color: #707070;
+    color: #404040;
 }
 .objekt-redirect:hover {
     cursor: pointer;
-    color: #6b9c32;
+    color: #909090;
 }
 .hide {
     display: none;
