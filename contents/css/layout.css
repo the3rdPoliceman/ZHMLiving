@@ -1,3 +1,8 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 html {
     overflow-y:scroll;
     height:100%;
@@ -12,25 +17,95 @@ table {
     border-collapse:collapse;
     border-spacing:0px;
 }
-td {
+td.header-column-1 {
     height:30px;
     padding-left:0px;
+    width:auto;
+    background-image:url("../images/logo_stretch.gif");
+    background-repeat:repeat-x;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+td.header-column-2 {
+    height:30px;
+    padding-left:0px;
+    width:890px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+td.header-column-3 {
+    height:30px;
+    padding-left:0px;
+    width:auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 p {
     margin-top:0px;
     margin-bottom:0px;
 }
-
-.header-column-1 {
-    width:auto;
-    background-image:url("../images/logo_stretch.gif");
-    background-repeat:repeat-x;
+form {
+    width:100%;
 }
-.header-column-2 {
-    width:890px;
+input.kontakt-formular-field {
+    width:100%;
+    background-color: rgb(235, 235, 235);
+    padding: 2px 6px 2px 6px;
+    border-width:0;
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW02-45Ligh", Arial, sans-serif;
+    font-size: 16px;
+    color: #666666;
 }
-.header-column-3 {
-    width:auto;
+.kontact-formular {
+    width:100%;
+    text-align:;
+    border-collapse: collapse;
+    margin:0px;
+    padding:0px;
+}
+.kontact-formular-row {
+    padding:0px;
+    margin:0px;
+    height:auto;
+}
+.kontact-formular-cell {
+    padding:0px;
+    margin:0px;
+    width :100%;
+    height:auto;
+    vertical-align: baseline;
+}
+.kontact-formular-label {
+    padding:0px 6px 0px 0px;
+    margin:0px;
+    height:auto;
+}
+textarea {
+    resize: none;
+    width:100%;
+    background-color: rgb(235, 235, 235);
+    padding: 2px 6px 2px 6px;
+    border-width:0;
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW02-45Ligh", Arial, sans-serif;
+    font-size: 16px;
+    color: #666666;
+}
+.textarea-label-holder {
+    padding:6px 4px 0px 0px;
+    margin: 0px;
+    height:auto;
+    vertical-align: top;
+}
+.textarea-label {
+    padding:0px;
+    vertical-align: top;
+    margin: 0px;
+    height:auto;
+}
+.input-wrapper {
+    display: inline-block;
+    width:100%;
+    padding-top: 1px;
 }
 .logo {
     width:213px;

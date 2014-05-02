@@ -23,6 +23,7 @@
     <!-- imported scripts -->
     <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script language="javascript" src="js/zhm.js"></script>
+    <script language="javascript" src="js/kontaktformular.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/src/markerwithlabel.js" type="text/javascript"></script>
 
@@ -34,47 +35,15 @@
     <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
     <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
     <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
-    <style type='text/css'>
-    .myClose {
-        height: 30px;
-        width: 30px;
-        background: rgba(0, 0, 0, 0);
-        background-image: url("images/fancybox/icon_lightbox_close.png");
-    }
-    .myPrev {
-        height: 30px;
-        width: 30px;
-        left: -37px;
-        top:50%;
-        background: rgba(0, 0, 0, 0);
-        background-image: url("images/fancybox/icon_lightbox_back.png");
-    }
-    .myNext {
-        height: 30px;
-        width: 30px;
-        right: -37px;
-        top:50%;
-        background: rgba(0, 0, 0, 0);
-        background-image: url("images/fancybox/icon_lightbox_next.png");
-    }
-    .fancybox-skin {
-        position: relative;
-        background: #f9f9f9;
-        color: #444;
-        text-shadow: none;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-    }
-    </style>
+    <!-- My Fancybox style customisations -->
+    <link rel="stylesheet" type="text/css" href="css/my-fancybox.css">
 
     <script type="text/javascript">
     $(document).ready(function() {
-        $("a[rel=visualisation-gallery-1]").fancybox({
+        var myFancyBoxSettings = {
             preload: 5,
-            nextEffect: 'fade',
-            prevEffect: 'fade',
+            nextEffect: 'elastic',
+            prevEffect: 'elastic',
             padding: 44,
             openSpeed: 250,
             prevSpeed: 500,
@@ -86,40 +55,11 @@
                 prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
                 next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
             }
-        });
+        };
 
-        $("a[rel=visualisation-gallery-2]").fancybox({
-            preload: 5,
-            nextEffect: 'fade',
-            prevEffect: 'fade',
-            padding: 44,
-            openSpeed: 250,
-            prevSpeed: 500,
-            nextSpeed: 500,
-            nextClick: true,
-            loop: true,
-            tpl: {
-                closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
-                prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
-                next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
-            }
-        });
-
-        $("a[rel=groundplan-slide]").fancybox({
-            nextEffect: 'fade',
-            prevEffect: 'fade',
-            padding: 44,
-            openSpeed: 250,
-            prevSpeed: 500,
-            nextSpeed: 500,
-            nextClick: true,
-            loop: true,
-            tpl: {
-                closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
-                prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
-                next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
-            }
-        });
+        $("a[rel=visualisation-gallery-1]").fancybox(myFancyBoxSettings);
+        $("a[rel=visualisation-gallery-2]").fancybox(myFancyBoxSettings);
+        $("a[rel=groundplan-slide]").fancybox(myFancyBoxSettings);
     });
     </script>
     <!-- Initialise accordian and map -->
@@ -280,7 +220,7 @@
                             <div class="vertical-spacer-30px"></div>
                         </div>
                         <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg">
-                            <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen-Layout-890.jpg">
+                            <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen-Layout.jpg">
                         </a>
                         <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
                         <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg" class="hide">
@@ -316,7 +256,7 @@
                             <div class="vertical-spacer-30px"></div>
                         </div>
                         <div>
-                            <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-Umgebung-Heimberg-890.jpg">
+                            <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-Umgebung-Heimberg.jpg">
                         </div>
                         <div class="attribution">Bild oben: Mit freundlicher Genehmigung von Berner Oberland Tourismus</div>
                         <div class="vertical-spacer-20px"></div>
@@ -366,6 +306,99 @@
                         </div>
                         <div class="paragraph-spacer"></div>
                         <div class="column1">
+                            <form id="ajax-contact" method="post" action="mailer.php">
+                                <table class="kontact-formular" align="center" cellpadding="10">
+                                    <tr class="kontact-formular-row">
+                                        <td class="kontact-formular-label">
+                                            <label for="vorname">Vorname</label>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <div class="input-wrapper">
+                                                    <input class="kontakt-formular-field" type="text" name="vorname" id="vorname" maxlength="50" required/>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="kontact-formular-row">
+                                        <td class="kontact-formular-label">
+                                            <label for="name">Name</label>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <div class="input-wrapper">
+                                                    <input class="kontakt-formular-field" type="text" name="name" id="name" maxlength="50" required/>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="kontact-formular-row">
+                                        <td class="kontact-formular-label">
+                                            <label for="email">E-Mail</label>
+                                        </td>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <input class="kontakt-formular-field" type="text" name="email" id="email" maxlength="50" required/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="kontact-formular-row">
+                                        <td class="kontact-formular-label">
+                                            <label for="strasse">Strasse</label>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <input class="kontakt-formular-field" type="text" name="strasse" id="strasse" maxlength="50" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="kontact-formular-row">
+                                        <td class="kontact-formular-label">
+                                            <label for="plz">PLZ/Ort</label>
+                                        </td>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <input class="kontakt-formular-field" type="text" name="plz" id="plz" maxlength="50" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="kontact-formular-row">
+                                        <td class="kontact-formular-label">
+                                            <label for="tel">Tel.</label>
+                                        </td>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <input class="kontakt-formular-field" type="text" name="tel" id="tel" maxlength="50" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="kontact-formular-row">
+                                        <td class="textarea-label-holder">
+                                            <label class="textarea-label" for="kommentar">Kommentar</label>
+                                        </td>
+                                        </td>
+                                        <td class="kontact-formular-cell">
+                                            <div class="input-wrapper">
+                                                <textarea class="kontakt-formular-field" name="kommentar" id="kommentar" rows="8" required></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="kontact-formular-row">
+                                        <td class="button-panel" colspan="2">
+                                            <button type="submit" value="Send" id="send">Send</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+
+                            <br>
+                            <div id="form-messages"></div>
+                            <br>
+
                             <p>Wir freuen uns auf Ihre Kontaktaufnahme.</p>
                             <div class="paragraph-spacer"></div>
                             <p class="paragraph-header">Ihr ZHM-living-Team</p>
@@ -402,7 +435,7 @@
     </div>
     <div class="footer">
         <div class="centered">
-            © ZHM living AG, 2013 • ALL RIGHTS RESERVED • KÖCHLISTRASSE 2, 8004 ZÜRICH, SCHWEIZ • <a href="mailto:info@zhm-living.ch">info@zhm-living.ch</a>
+            © ZHM living AG, 2014 • All Rights Reserved • Köchlistrasse 2, 8004 Zürich, Schweiz <a href="mailto:info@zhm-living.ch">info@zhm-living.ch</a>
         </div>
     </div>
 

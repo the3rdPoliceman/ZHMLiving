@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             }
         },
         'ftp-deploy': {
-            build: {
+            test: {
                 auth: {
                     host: 'zhm-living.ch',
                     port: 21,
@@ -54,6 +54,16 @@ module.exports = function(grunt) {
                 },
                 src: 'build',
                 dest: '/www/test.zhm-living.ch/',
+                exclusions: ['build/**/.DS_Store', 'build/**/Thumbs.db', 'dist/tmp']
+            },
+            live: {
+                auth: {
+                    host: 'zhm-living.ch',
+                    port: 21,
+                    authKey: 'key1'
+                },
+                src: 'build',
+                dest: '/www/zhm-living.ch/',
                 exclusions: ['build/**/.DS_Store', 'build/**/Thumbs.db', 'dist/tmp']
             }
         },
@@ -69,6 +79,7 @@ module.exports = function(grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-ftp-deploy');
+    grunt.loadNpmTasks('grunt-ftp');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -76,6 +87,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['clean:build', 'copy:main:files']);
-    grunt.registerTask('deploy', ['clean:build', 'copy:main:files', 'ftp-deploy']);
+    grunt.registerTask('build', ['clean:build', 'copy:main:files']);
+
+    grunt.registerTask('deploy-test', ['clean:build', 'copy:main:files', 'ftp-deploy:test']);
+    grunt.registerTask('deploy-live', ['clean:build', 'copy:main:files', 'ftp-deploy:live']);
 };

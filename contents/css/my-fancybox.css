@@ -1,0 +1,31 @@
+.myClose {
+    height: 30px;
+    width: 30px;
+    background: rgba(0, 0, 0, 0);
+    background-image: url("../images/fancybox/icon_lightbox_close.png");
+}
+.myPrev {
+    height: 30px;
+    width: 30px;
+    left: -37px;
+    top:50%;
+    background: rgba(0, 0, 0, 0);
+    background-image: url("../images/fancybox/icon_lightbox_back.png");
+}
+.myNext {
+    height: 30px;
+    width: 30px;
+    right: -37px;
+    top:50%;
+    background: rgba(0, 0, 0, 0);
+    background-image: url("../images/fancybox/icon_lightbox_next.png");
+}
+.fancybox-skin {
+    position: relative;
+    background: #f9f9f9;
+    color: #444;
+    text-shadow: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}

@@ -130,3 +130,32 @@ a:hover {
     width: 50px;
     background: #ff0000;
 }
+.success {
+    padding: 5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #6b9c32;
+    background-color: #dfefcd;
+    border: none;
+}
+.error {
+    padding: 5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #b94a48;
+    background-color: #f2dede;
+    border: none;
+}
+#send {
+    background-color: rgb(235, 235, 235);
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW02-45Ligh", Arial, sans-serif;
+    color: #666666;
+    font-size: 16px;
+    cursor: pointer;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    width: auto;
+    border: none;
+    margin: 0px;
+}
+.button-panel {
+    text-align: right;
+}
