@@ -27,7 +27,8 @@ body, h1 {
 }
 ul {
     margin: 0px 0px 0px 16px;
-    padding-left: list-style-position: outside;
+    padding-left: 0px;
+    list-style-position: outside;
     list-style-type:;
 }
 ul li {
@@ -145,17 +146,17 @@ a:hover {
     border: none;
 }
 #send {
-    background-color: rgb(235, 235, 235);
     font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeueW02-45Ligh", Arial, sans-serif;
-    color: #666666;
+    background-image: url("../images/suche-button.gif");
+    color: #FFFFFF;
     font-size: 16px;
     cursor: pointer;
-    height: auto;
-    padding: 10px 10px 10px 10px;
-    width: auto;
     border: none;
     margin: 0px;
+    height: 24px;
+    width:146px;
 }
 .button-panel {
-    text-align: right;
+    text-align: left;
+    padding: 0px;
 }

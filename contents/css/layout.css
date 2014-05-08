@@ -12,7 +12,7 @@ img {
 }
 table {
     width:100%;
-    margin:60px 0px 20px 0px;
+    margin:40px 0px 10px 0px;
     border:0px solid gray;
     border-collapse:collapse;
     border-spacing:0px;
@@ -76,7 +76,7 @@ input.kontakt-formular-field {
     vertical-align: baseline;
 }
 .kontact-formular-label {
-    padding:0px 6px 0px 0px;
+    padding:0px 11px 0px 0px;
     margin:0px;
     height:auto;
 }
@@ -91,7 +91,7 @@ textarea {
     color: #666666;
 }
 .textarea-label-holder {
-    padding:6px 4px 0px 0px;
+    padding:6px 10px 0px 0px;
     margin: 0px;
     height:auto;
     vertical-align: top;
@@ -112,7 +112,7 @@ textarea {
     height:46px;
 }
 #header-menu-spacer {
-    height:66px;
+    height:40px;
     width:100%;
 }
 #map_canvas {
@@ -158,6 +158,10 @@ textarea {
 .vertical-spacer-30px {
     width: 100%;
     height: 30px;
+}
+.vertical-spacer-60px {
+    width: 100%;
+    height: 60px;
 }
 .column1 {
     float:left;

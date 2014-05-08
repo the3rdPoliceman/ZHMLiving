@@ -40,10 +40,10 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-        var myFancyBoxSettings = {
+        var noCaptionSettings = {
             preload: 5,
-            nextEffect: 'elastic',
-            prevEffect: 'elastic',
+            nextEffect: 'fade',
+            prevEffect: 'fade',
             padding: 44,
             openSpeed: 250,
             prevSpeed: 500,
@@ -56,10 +56,32 @@
                 next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
             }
         };
+        var withCaptionSettings = {
+            preload: 5,
+            nextEffect: 'fade',
+            prevEffect: 'fade',
+            padding: 44,
+            openSpeed: 250,
+            prevSpeed: 500,
+            nextSpeed: 500,
+            nextClick: true,
+            loop: true,
+            tpl: {
+                closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
+                prev: '<a title="Previous" class="fancybox-nav myPrev" href="javascript:;"><span></span></a>',
+                next: '<a title="Next" class="fancybox-nav myNext" href="javascript:;"><span></span></a>'
+            },
+            helpers: {
+                title: {
+                    type: 'inside'
+                }
+            }
+        };
 
-        $("a[rel=visualisation-gallery-1]").fancybox(myFancyBoxSettings);
-        $("a[rel=visualisation-gallery-2]").fancybox(myFancyBoxSettings);
-        $("a[rel=groundplan-slide]").fancybox(myFancyBoxSettings);
+        $("a[rel=visualisation-gallery-1]").fancybox(noCaptionSettings);
+        $("a[rel=visualisation-gallery-2]").fancybox(noCaptionSettings);
+        $("a[rel=bluemlisalp-gallery]").fancybox(withCaptionSettings);
+        $("a[rel=groundplan-gallery]").fancybox(withCaptionSettings);
     });
     </script>
     <!-- Initialise accordian and map -->
@@ -178,6 +200,14 @@
                     <span class="objekt-tab-header" id="wohnungen">Wohnungen</span>
                     <span class="objekt-tab-header" id="umgebung">Umgebung</span>
                     <span class="objekt-tab-header" id="unterlagen">Unterlagen</span>
+                    <a class="objekt-tab-header" id="unterlagen" rel="bluemlisalp-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg">Gallerie</a>
+                    <a rel="bluemlisalp-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
+                    <a rel="bluemlisalp-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg" class="hide"></a>
+                    <a rel="bluemlisalp-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen_closeup.jpg" class="hide"></a>
+                    <a rel="bluemlisalp-gallery" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
+                    <a rel="bluemlisalp-gallery" title="Erdgeschoss" href="images/floorplans/bluemlisalp_heimberg_EG.gif" class="hide"></a>
+                    <a rel="bluemlisalp-gallery" title="Erstes Obergeschoss" href="images/floorplans/bluemlisalp_heimberg_OG1.gif" class="hide"></a>
+                    <a rel="bluemlisalp-gallery" title="Zweites Obergeschoss" href="images/floorplans/bluemlisalp_heimberg_OG2.gif" class="hide"></a>
                 </div>
                 <div class="horizontal-divider"></div>
                 <div class="tab-content-holder">
@@ -193,13 +223,14 @@
                             <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
                             <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg" class="hide"></a>
                             <a rel="visualisation-gallery-1" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
+                            <div class="attribution">Klicken Sie auf das obere Bild zur Vergrösserung</div>
                         </div>
                         <div class="column2">
                             <p>
-                                <span class="paragraph-header">Ländliches Wohnen in der Stadt Thun:&nbsp</span>Die Lage des Wohnhauses ist einzigartig - Sie erleben Wohnen mit Dorfcharakter und profitieren gleichzeitig von der Nähe zur Stadt Thun, die im Süden angrenzt. Die Liegenschaft mit drei 4.5-Zimmer-Wohnungen auf drei Stöcken und die Umgebung eignen sich hervorragend als Wohnort für Familien mit Kindern.
+                                <span class="paragraph-header">Ländliches Wohnen in der Stadt Thun:&nbsp</span>Die Lage des Wohnhauses ist einzigartig – Sie erleben Wohnen mit Dorfcharakter und profitieren gleichzeitig von der Nähe zur Stadt Thun, die im Süden angrenzt. Die Liegenschaft mit drei 4.5-Zimmer-Wohnungen auf drei Stöcken und die Umgebung eignen sich hervorragend als Wohnort für Familien mit Kindern.
                             </p>
                             <div class="paragraph-spacer"></div>
-                            <p>Bei der Entwicklung er Liegenschaft wird hoher Wert auf eine solide Bauweise und auf die Wahl der Materialien gelegt. Trotz der hohen Bauqualität überzeugen die drei Kaufobjekte durch einen äußerst attraktiven Preis.</p>
+                            <p>Bei der Entwicklung er Liegenschaft wird hoher Wert auf eine solide Bauweise und auf die Wahl der Materialien gelegt. Trotz der hohen Bauqualität überzeugen die drei Kaufobjekte durch einen äusserst attraktiven Preis.</p>
                             <div class="paragraph-spacer"></div>
                             <p>
                                 <span class="objekt-redirect" target="wohnungen">Zu den Wohnungen...</p>
@@ -209,7 +240,7 @@
                         <div class="vertical-spacer-20px"></div>
                         <div class="column1">
                             <span class="paragraph-header">Erwerben Sie Stockwerkeigentum im Mehrfamilienhaus Blümlisalp und ziehen Sie schon bald in Ihr neues Zuhause in Heimberg.</span>
-                            <br>Drei Wohnungen befinden sich im Mehrfamilienhaus Blüemlisalp. Es wird grossen Wert auf die Wahl hochwertiger Materialien und eine solide Bauweise gelegt. Kundenwünsche bezüglich des Ausbaus werden gerne berücksichtigt.
+                            <br>Drei Wohnungen befinden sich im Mehrfamilienhaus Blümlisalp. Es wird grossen Wert auf die Wahl hochwertiger Materialien und eine solide Bauweise gelegt. Kundenwünsche bezüglich des Ausbaus werden gerne berücksichtigt.
 
                             <div class="vertical-spacer-30px"></div>
                         </div>
@@ -219,18 +250,22 @@
                             <br>Ausserdem gibt es zu jeder Wohnung ein Kellerabteil im Untergeschoss und eine Terrasse (im Erdgeschoss) bzw. ein Balkon (im 1. und 2. Obergeschoss).
                             <div class="vertical-spacer-30px"></div>
                         </div>
-                        <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen.jpg">
+                        <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen_closeup.jpg">
                             <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-visu-3-innen-Layout.jpg">
                         </a>
                         <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-4-bad.jpg" class="hide"></a>
                         <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-1-aussen.jpg" class="hide">
                             <a rel="visualisation-gallery-2" href="images/visualisations/heimberg-mfh-bluemlisalp-visu-2-aussen-abend.jpg" class="hide"></a>
 
-                            <div class="vertical-spacer-30px"></div>
+                            <div class="attribution">Klicken Sie auf das obere Bild zur Vergrösserung</div>
+                            <div class="vertical-spacer-60px"></div>
                             <div class="column1">
-                                <a rel="groundplan-slide" href="images/visualisations/heimberg-mfh-bluemlisalp-GR.gif">
+                                <a rel="groundplan-gallery" title="Erdgeschoss" href="images/floorplans/bluemlisalp_heimberg_EG.gif">
                                     <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-GR_kl.gif">
                                 </a>
+                                <a rel="groundplan-gallery" title="Erstes Obergeschoss" href="images/floorplans/bluemlisalp_heimberg_OG1.gif" class="hide"></a>
+                                <a rel="groundplan-gallery" title="Zweites Obergeschoss" href="images/floorplans/bluemlisalp_heimberg_OG2.gif" class="hide"></a>
+                                <div class="attribution">Klicken Sie auf das obere Bild, um alle drei Wohnungsgrundrisse zu sehen</div>
                             </div>
                             <div class="column2">
                                 <p>Jede Wohnung verfügt über einen grosszügigen Wohn- und Essraum mit einer offenen Küche und total 113 m² Wohnfläche. Die Grundrisspläne der drei Kaufobjekte sind identisch. Bei den Wohnungen im ersten und zweiten Obergeschoss ist ein Balkon anstatt der Terrasse in gleicher Grösse vorhanden.
@@ -259,7 +294,7 @@
                             <img alt="" src="images/visualisations/heimberg-mfh-bluemlisalp-Umgebung-Heimberg.jpg">
                         </div>
                         <div class="attribution">Bild oben: Mit freundlicher Genehmigung von Berner Oberland Tourismus</div>
-                        <div class="vertical-spacer-20px"></div>
+                        <div class="vertical-spacer-60px"></div>
                         <div class="column1">
                             <span class="paragraph-header">Wohnen an der Blümlisalpstrasse</span>
                             <div class="vertical-spacer-30px"></div>
@@ -301,16 +336,18 @@
                                 <li>Kinderspielplatz vor dem Haus</li>
                                 <li>Einkaufszentrum vier Gehminuten entfernt</li>
                             </ul>
-                            <div class="paragraph-spacer"></div>
-                            Für weitere Unterlagen sowie Kaufpreise der drei Wohnungen und der Aussenparkplätze füllen Sie das untenstehende Formular aus.
                         </div>
                         <div class="paragraph-spacer"></div>
                         <div class="column1">
+
+                            Für weitere Unterlagen sowie Kaufpreise der drei Wohnungen und der Aussenparkplätze füllen Sie das untenstehende Formular aus.
+                            <div class="paragraph-spacer"></div>
                             <form id="ajax-contact" method="post" action="mailer.php">
                                 <table class="kontact-formular" align="center" cellpadding="10">
                                     <tr class="kontact-formular-row">
                                         <td class="kontact-formular-label">
-                                            <label for="vorname">Vorname</label>
+                                            <label for="vorname">Vorname<sup>*</sup>
+                                            </label>
                                         </td>
                                         <td class="kontact-formular-cell">
                                             <div class="input-wrapper">
@@ -322,7 +359,8 @@
                                     </tr>
                                     <tr class="kontact-formular-row">
                                         <td class="kontact-formular-label">
-                                            <label for="name">Name</label>
+                                            <label for="name">Name<sup>*</sup>
+                                            </label>
                                         </td>
                                         <td class="kontact-formular-cell">
                                             <div class="input-wrapper">
@@ -334,7 +372,8 @@
                                     </tr>
                                     <tr class="kontact-formular-row">
                                         <td class="kontact-formular-label">
-                                            <label for="email">E-Mail</label>
+                                            <label for="email">E-Mail<sup>*</sup>
+                                            </label>
                                         </td>
                                         </td>
                                         <td class="kontact-formular-cell">
@@ -377,7 +416,8 @@
                                     </tr>
                                     <tr class="kontact-formular-row">
                                         <td class="textarea-label-holder">
-                                            <label class="textarea-label" for="kommentar">Kommentar</label>
+                                            <label class="textarea-label" for="kommentar">Kommentar<sup>*</sup>
+                                            </label>
                                         </td>
                                         </td>
                                         <td class="kontact-formular-cell">
@@ -388,6 +428,7 @@
                                     </tr>
 
                                     <tr class="kontact-formular-row">
+                                        <td></td>
                                         <td class="button-panel" colspan="2">
                                             <button type="submit" value="Send" id="send">Send</button>
                                         </td>
@@ -400,17 +441,18 @@
                             <br>
 
                             <p>Wir freuen uns auf Ihre Kontaktaufnahme.</p>
-                            <div class="paragraph-spacer"></div>
                             <p class="paragraph-header">Ihr ZHM-living-Team</p>
                         </div>
                     </div>
+
+                    <div class="paragraph-spacer"></div>
                 </div>
             </div>
             <div class="accordian-header centered">Referenzen</div>
             <div class="horizontal-divider"></div>
             <div class="accordian-content centered">
                 <div class="content-top-spacer"></div>
-                Unser Internetauftritt ist in Bearbeitung
+                Besuchen Sie die Webseite unseres Architekten und Mitinhabers Benjamin Zundel: <a href="http://www.dozu.ch">www.dozu.ch</a>
             </div>
             <div class="accordian-header centered">Kontakt</div>
             <div class="horizontal-divider"></div>
@@ -435,7 +477,7 @@
     </div>
     <div class="footer">
         <div class="centered">
-            © ZHM living AG, 2014 • All Rights Reserved • Köchlistrasse 2, 8004 Zürich, Schweiz <a href="mailto:info@zhm-living.ch">info@zhm-living.ch</a>
+            © ZHM living AG, 2014 • All Rights Reserved • Köchlistrasse 2, 8004 Zürich, Schweiz • <a href="mailto:info@zhm-living.ch">info@zhm-living.ch</a>
         </div>
     </div>
 
