@@ -52,7 +52,7 @@
             // send auto response
             try {
                 $autorespondertext = file_get_contents("autoresponse.html");
-                $headers = "From: $name <info@zhm-living.ch>\r\n";
+                $headers = "From: ZHM Living <info@zhm-living.ch>\r\n";
                 $headers .= "Content-type:  text/html\r\n";
                 mail($email, "Ihre Anfrage", $autorespondertext, $headers);
             } catch (Exception $e) {
