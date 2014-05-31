@@ -92,7 +92,7 @@ a:hover {
     display: block;
 }
 .objekt-tab-header {
-    color: #404040;
+    color: #404040 !important;
     padding-right: 30px;
 }
 .objekt-tab-header:hover {
