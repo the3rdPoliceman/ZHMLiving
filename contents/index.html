@@ -101,9 +101,10 @@
         var styles = [{
             stylers: [{
                 hue: "#6b9c32"
-            }, {
-                saturation: 0
-            }]
+            }, 
+            { saturation: -100 },
+            { lightness: 0 },
+            { gamma:0.5 }]
         }, {
             featureType: "poi.business",
             elementType: "labels",
@@ -133,10 +134,10 @@
         var myLatLng = new google.maps.LatLng(47.373057, 8.524058);
 
         var markerImage = {
-            url: 'images/map_marker.png',
-            size: new google.maps.Size(146, 34),
+            url: 'images/map_pin.png',
+            size: new google.maps.Size(40,56),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(135, 34)
+            anchor: new google.maps.Point(20,56)
         };
 
         var marker = new google.maps.Marker({
